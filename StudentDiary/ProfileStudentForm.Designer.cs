@@ -96,7 +96,7 @@
             this.PasswordStudentInfoLabel.TabIndex = 7;
             this.PasswordStudentInfoLabel.Text = "*********";
             // 
-            // ProfileStudent
+            // ProfileStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,8 @@
             this.Controls.Add(this.EmailStudentLabel);
             this.Controls.Add(this.NameStudentLabel);
             this.Controls.Add(this.NameStudentInfoLabel);
-            this.Name = "ProfileStudent";
-            this.Text = "ProfileStudent";
+            this.Name = "ProfileStudentForm";
+            this.Text = "Профиль";
             this.ResumeLayout(false);
             this.PerformLayout();
 

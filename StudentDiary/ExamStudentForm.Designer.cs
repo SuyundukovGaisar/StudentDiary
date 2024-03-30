@@ -77,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExamStudentGridView);
             this.Name = "ExamStudentForm";
-            this.Text = "ExamStudentForm";
+            this.Text = "Экзамены";
             ((System.ComponentModel.ISupportInitialize)(this.ExamStudentGridView)).EndInit();
             this.ResumeLayout(false);
 

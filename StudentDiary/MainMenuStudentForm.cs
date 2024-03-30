@@ -13,8 +13,10 @@ namespace StudentDiary
     public partial class MainMenuStudentForm : Form
     {
         public string groupId;
+        public string studentId;
         public MainMenuStudentForm(string id)
         {
+            groupId = id;
             InitializeComponent();
             DatabaseService dbService = new DatabaseService();
             List<string[]> studentsList = dbService.GetStudents();
@@ -44,6 +46,8 @@ namespace StudentDiary
 
         private void Mondaybutton_Click(object sender, EventArgs e)
         {
+            MondayScheduleForm mondayScheduleForm = new MondayScheduleForm(groupId);
+            mondayScheduleForm.Show();
             
         }
     }

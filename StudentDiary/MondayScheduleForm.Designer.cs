@@ -1,6 +1,6 @@
 ﻿namespace StudentDiary
 {
-    partial class MondaySchedule
+    partial class MondayScheduleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MondayScheduleGridView = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,13 +36,13 @@
             this.Type_of_lesson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Start_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.End_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MondayScheduleGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // MondayScheduleGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MondayScheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MondayScheduleGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Subject,
             this.Teacher,
@@ -50,12 +50,12 @@
             this.Type_of_lesson,
             this.Start_time,
             this.End_time});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 426);
-            this.dataGridView1.TabIndex = 0;
+            this.MondayScheduleGridView.Location = new System.Drawing.Point(12, 12);
+            this.MondayScheduleGridView.Name = "MondayScheduleGridView";
+            this.MondayScheduleGridView.RowHeadersWidth = 51;
+            this.MondayScheduleGridView.RowTemplate.Height = 24;
+            this.MondayScheduleGridView.Size = new System.Drawing.Size(776, 426);
+            this.MondayScheduleGridView.TabIndex = 0;
             // 
             // Id
             // 
@@ -106,22 +106,22 @@
             this.End_time.Name = "End_time";
             this.End_time.Width = 125;
             // 
-            // MondaySchedule
+            // MondayScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "MondaySchedule";
-            this.Text = "MondaySchedule";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.Add(this.MondayScheduleGridView);
+            this.Name = "MondayScheduleForm";
+            this.Text = "Понедельник";
+            ((System.ComponentModel.ISupportInitialize)(this.MondayScheduleGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MondayScheduleGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teacher;
