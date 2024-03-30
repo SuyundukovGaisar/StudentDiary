@@ -40,12 +40,15 @@ namespace StudentDiary
                 if (student[5] == id)
                 {
                     NameMenuLabel.Text = student[1] + " " + student[2] + " " + student[3];
-                    GroupMainMenuStudentLabel.Text = student[6];
-                    
-                }
-                
+                    foreach (var group in groupsList) 
+                    {
+                        if (student[6] == group[0])
+                        {
+                            GroupMainMenuStudentLabel.Text = "Номер группы: " + group[1];
+                        }
+                    }
+                } 
             }
-            
         }
 
         private void Profilebutton_Click(object sender, EventArgs e)
