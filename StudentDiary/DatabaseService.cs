@@ -121,7 +121,7 @@ namespace StudentDiary
 
             return marksList;
         }
-        public List<string[]> GetSchedule()
+        public List<string[]> GetSchedule(string groupId = "0", string dayOfWeek = "0")
         {
             List<string[]> schedulesList = new List<string[]>();
 
@@ -129,6 +129,24 @@ namespace StudentDiary
             {
                 sqliteCon.Open();
                 string query = "SELECT * FROM schedule";
+                switch (dayOfWeek)
+                {
+                    case "1":
+                        query = $"SELECT * FROM schedule WHERE dayofweek = 1 AND group_id = '{int.Parse(groupId)}'";
+                        break;
+                    case "2":
+                        query = $"SELECT * FROM schedule WHERE dayofweek = 2 AND group_id = '{int.Parse(groupId)}'";
+                        break;
+                    case "3":
+                        query = $"SELECT * FROM schedule WHERE dayofweek = 3 AND group_id = '{int.Parse(groupId)}'";
+                        break;
+                    case "4":
+                        query = $"SELECT * FROM schedule WHERE dayofweek = 4 AND group_id = '{int.Parse(groupId)}'";
+                        break;
+                    case "5":
+                        query = $"SELECT * FROM schedule WHERE dayofweek = 5 AND group_id = '{int.Parse(groupId)}'";
+                        break;
+                }
                 using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -136,6 +154,28 @@ namespace StudentDiary
                         while (reader.Read())
                         {
                             schedulesList.Add(new string[] { reader["id"].ToString(), reader["subject_id"].ToString(), reader["teacher_id"].ToString(), reader["group_id"].ToString(), reader["typeof_lesson"].ToString(), reader["dayofweek"].ToString(), reader["start_time"].ToString(), reader["end_time"].ToString() });
+                        }
+                    }
+                }
+            }
+
+            return schedulesList;
+        }
+        public List<string[]> GetMondaySchedule()
+        {
+            List<string[]> schedulesList = new List<string[]>();
+
+            using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
+            {
+                sqliteCon.Open();
+                string query = "SELECT * FROM schedule WHERE dayofweek = 1";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
+                {
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            schedulesList.Add(new string[] { reader["id"].ToString(), reader["subject_id"].ToString(), reader["teacher_id"].ToString(), reader["group_id"].ToString(), reader["typeof_lesson"].ToString(), reader["start_time"].ToString(), reader["end_time"].ToString() });
                         }
                     }
                 }
@@ -164,6 +204,28 @@ namespace StudentDiary
             }
 
             return subjectsList;
+        }
+        public List<string[]> GetTeachers()
+        {
+            List<string[]> teachersList = new List<string[]>();
+
+            using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
+            {
+                sqliteCon.Open();
+                string query = "SELECT * FROM teachers";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
+                {
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            teachersList.Add(new string[] { reader["id"].ToString(), reader["last_name"].ToString(), reader["first_name"].ToString(), reader["otchestvo"].ToString(), reader["subject_id"].ToString(), reader["user_id"].ToString() });
+                        }
+                    }
+                }
+            }
+
+            return teachersList;
         }
 
     }

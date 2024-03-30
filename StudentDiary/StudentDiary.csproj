@@ -90,11 +90,11 @@
     <Compile Include="MainMenuTeacherForm.Designer.cs">
       <DependentUpon>MainMenuTeacherForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MondayScheduleForm.cs">
+    <Compile Include="ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MondayScheduleForm.Designer.cs">
-      <DependentUpon>MondayScheduleForm.cs</DependentUpon>
+    <Compile Include="ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileStudentForm.cs">
       <SubType>Form</SubType>
@@ -116,8 +116,8 @@
     <EmbeddedResource Include="MainMenuTeacherForm.resx">
       <DependentUpon>MainMenuTeacherForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MondayScheduleForm.resx">
-      <DependentUpon>MondayScheduleForm.cs</DependentUpon>
+    <EmbeddedResource Include="ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileStudentForm.resx">
       <DependentUpon>ProfileStudentForm.cs</DependentUpon>

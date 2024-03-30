@@ -33,7 +33,6 @@
             this.Wednesdaybutton = new System.Windows.Forms.Button();
             this.Thursdaybutton = new System.Windows.Forms.Button();
             this.Fridaybutton = new System.Windows.Forms.Button();
-            this.Saturdaybutton = new System.Windows.Forms.Button();
             this.GroupMainMenuStudentLabel = new System.Windows.Forms.Label();
             this.NameMenuLabel = new System.Windows.Forms.Label();
             this.Profilebutton = new System.Windows.Forms.Button();
@@ -64,6 +63,7 @@
             this.Tuesdaybutton.TabIndex = 1;
             this.Tuesdaybutton.Text = "Вторник";
             this.Tuesdaybutton.UseVisualStyleBackColor = false;
+            this.Tuesdaybutton.Click += new System.EventHandler(this.Tuesdaybutton_Click);
             // 
             // Wednesdaybutton
             // 
@@ -76,6 +76,7 @@
             this.Wednesdaybutton.TabIndex = 2;
             this.Wednesdaybutton.Text = "Среда";
             this.Wednesdaybutton.UseVisualStyleBackColor = false;
+            this.Wednesdaybutton.Click += new System.EventHandler(this.Wednesdaybutton_Click);
             // 
             // Thursdaybutton
             // 
@@ -88,6 +89,7 @@
             this.Thursdaybutton.TabIndex = 3;
             this.Thursdaybutton.Text = "Четверг";
             this.Thursdaybutton.UseVisualStyleBackColor = false;
+            this.Thursdaybutton.Click += new System.EventHandler(this.Thursdaybutton_Click);
             // 
             // Fridaybutton
             // 
@@ -100,18 +102,7 @@
             this.Fridaybutton.TabIndex = 4;
             this.Fridaybutton.Text = "Пятница";
             this.Fridaybutton.UseVisualStyleBackColor = false;
-            // 
-            // Saturdaybutton
-            // 
-            this.Saturdaybutton.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Saturdaybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Saturdaybutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Saturdaybutton.Location = new System.Drawing.Point(168, 224);
-            this.Saturdaybutton.Name = "Saturdaybutton";
-            this.Saturdaybutton.Size = new System.Drawing.Size(150, 100);
-            this.Saturdaybutton.TabIndex = 5;
-            this.Saturdaybutton.Text = "Суббота";
-            this.Saturdaybutton.UseVisualStyleBackColor = false;
+            this.Fridaybutton.Click += new System.EventHandler(this.Fridaybutton_Click);
             // 
             // GroupMainMenuStudentLabel
             // 
@@ -170,7 +161,6 @@
             this.Controls.Add(this.Profilebutton);
             this.Controls.Add(this.GroupMainMenuStudentLabel);
             this.Controls.Add(this.NameMenuLabel);
-            this.Controls.Add(this.Saturdaybutton);
             this.Controls.Add(this.Fridaybutton);
             this.Controls.Add(this.Thursdaybutton);
             this.Controls.Add(this.Wednesdaybutton);
@@ -189,7 +179,6 @@
         private System.Windows.Forms.Button Wednesdaybutton;
         private System.Windows.Forms.Button Thursdaybutton;
         private System.Windows.Forms.Button Fridaybutton;
-        private System.Windows.Forms.Button Saturdaybutton;
         private System.Windows.Forms.Label GroupMainMenuStudentLabel;
         private System.Windows.Forms.Label NameMenuLabel;
         private System.Windows.Forms.Button Profilebutton;

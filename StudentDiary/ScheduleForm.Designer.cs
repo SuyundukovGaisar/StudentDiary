@@ -1,6 +1,6 @@
 ﻿namespace StudentDiary
 {
-    partial class MondayScheduleForm
+    partial class ScheduleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MondayScheduleGridView = new System.Windows.Forms.DataGridView();
+            this.ScheduleGridView = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,13 +36,13 @@
             this.Type_of_lesson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Start_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.End_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.MondayScheduleGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // MondayScheduleGridView
+            // ScheduleGridView
             // 
-            this.MondayScheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MondayScheduleGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ScheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ScheduleGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Subject,
             this.Teacher,
@@ -50,12 +50,12 @@
             this.Type_of_lesson,
             this.Start_time,
             this.End_time});
-            this.MondayScheduleGridView.Location = new System.Drawing.Point(12, 12);
-            this.MondayScheduleGridView.Name = "MondayScheduleGridView";
-            this.MondayScheduleGridView.RowHeadersWidth = 51;
-            this.MondayScheduleGridView.RowTemplate.Height = 24;
-            this.MondayScheduleGridView.Size = new System.Drawing.Size(776, 426);
-            this.MondayScheduleGridView.TabIndex = 0;
+            this.ScheduleGridView.Location = new System.Drawing.Point(12, 12);
+            this.ScheduleGridView.Name = "ScheduleGridView";
+            this.ScheduleGridView.RowHeadersWidth = 51;
+            this.ScheduleGridView.RowTemplate.Height = 24;
+            this.ScheduleGridView.Size = new System.Drawing.Size(776, 426);
+            this.ScheduleGridView.TabIndex = 0;
             // 
             // Id
             // 
@@ -106,22 +106,22 @@
             this.End_time.Name = "End_time";
             this.End_time.Width = 125;
             // 
-            // MondayScheduleForm
+            // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.MondayScheduleGridView);
-            this.Name = "MondayScheduleForm";
+            this.Controls.Add(this.ScheduleGridView);
+            this.Name = "ScheduleForm";
             this.Text = "Понедельник";
-            ((System.ComponentModel.ISupportInitialize)(this.MondayScheduleGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView MondayScheduleGridView;
+        private System.Windows.Forms.DataGridView ScheduleGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teacher;

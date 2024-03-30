@@ -47,4 +47,4 @@ C:\Users\Kazak_oqfcdqr\Source\Repos\StudentDiary\StudentDiary\obj\Debug\StudentD
 C:\Users\Kazak_oqfcdqr\Source\Repos\StudentDiary\StudentDiary\obj\Debug\StudentDiary.pdb
 C:\Users\Kazak_oqfcdqr\Source\Repos\StudentDiary\StudentDiary\obj\Debug\StudentDiary.MainMenuTeacherForm.resources
 C:\Users\user\source\repos\StudentDiary\StudentDiary\obj\Debug\StudentDiary.MainMenuTeacherForm.resources
-C:\Users\user\source\repos\StudentDiary\StudentDiary\obj\Debug\StudentDiary.MondayScheduleForm.resources
+C:\Users\user\source\repos\StudentDiary\StudentDiary\obj\Debug\StudentDiary.ScheduleForm.resources

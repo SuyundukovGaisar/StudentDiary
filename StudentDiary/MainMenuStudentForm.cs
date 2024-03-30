@@ -16,7 +16,6 @@ namespace StudentDiary
         public string studentId;
         public MainMenuStudentForm(string id)
         {
-            groupId = id;
             InitializeComponent();
             DatabaseService dbService = new DatabaseService();
             List<string[]> studentsList = dbService.GetStudents();
@@ -26,29 +25,50 @@ namespace StudentDiary
             {
                 if (student[5] == id)
                 {
+                    studentId = student[5];
                     NameMenuLabel.Text = student[1] + " " + student[2] + " " + student[3];
-                    foreach (var group in groupsList) 
+                    foreach (var group in groupsList)
                     {
                         if (student[6] == group[0])
                         {
+                            groupId = student[6];
                             GroupMainMenuStudentLabel.Text = "Номер группы: " + group[1];
                         }
                     }
-                } 
+                }
             }
         }
 
         private void Profilebutton_Click(object sender, EventArgs e)
         {
-            ProfileStudentForm profileStudentForm = new ProfileStudentForm();
+            ProfileStudentForm profileStudentForm = new ProfileStudentForm(studentId);
             profileStudentForm.Show();
         }
 
         private void Mondaybutton_Click(object sender, EventArgs e)
         {
-            MondayScheduleForm mondayScheduleForm = new MondayScheduleForm(groupId);
-            mondayScheduleForm.Show();
-            
+            ScheduleForm scheduleForm = new ScheduleForm(groupId, "1");
+            scheduleForm.Show();
+        }
+        private void Tuesdaybutton_Click(object sender, EventArgs e)
+        {
+            ScheduleForm scheduleForm = new ScheduleForm(groupId, "2");
+            scheduleForm.Show();
+        }
+        private void Wednesdaybutton_Click(object sender, EventArgs e)
+        {
+            ScheduleForm scheduleForm = new ScheduleForm(groupId, "3");
+            scheduleForm.Show();
+        }
+        private void Thursdaybutton_Click(object sender, EventArgs e)
+        {
+            ScheduleForm scheduleForm = new ScheduleForm(groupId, "4");
+            scheduleForm.Show();
+        }
+        private void Fridaybutton_Click(object sender, EventArgs e)
+        {
+            ScheduleForm scheduleForm = new ScheduleForm(groupId, "5");
+            scheduleForm.Show();
         }
     }
 }

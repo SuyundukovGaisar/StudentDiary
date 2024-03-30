@@ -12,10 +12,19 @@ namespace StudentDiary
 {
     public partial class ProfileStudentForm : Form
     {
-        public ProfileStudentForm()
+        public ProfileStudentForm(string studentId)
         {
             InitializeComponent();
-
+            DatabaseService dbService = new DatabaseService();
+            List<string[]> studentsList = new List<string[]>();
+            foreach (string[] student in studentsList)
+            {
+                if (student[5] == studentId)
+                {
+                    NameStudentInfoLabel.Text = student[1] + " " + student[2] + " " + student[3];
+                }
+            }
+            
         }
     }
 }
