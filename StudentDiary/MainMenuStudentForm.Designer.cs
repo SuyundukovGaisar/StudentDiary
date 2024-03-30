@@ -51,6 +51,7 @@
             this.Mondaybutton.TabIndex = 0;
             this.Mondaybutton.Text = "Понедельник";
             this.Mondaybutton.UseVisualStyleBackColor = false;
+            this.Mondaybutton.Click += new System.EventHandler(this.Mondaybutton_Click);
             // 
             // Tuesdaybutton
             // 

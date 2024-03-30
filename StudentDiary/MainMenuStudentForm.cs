@@ -12,22 +12,7 @@ namespace StudentDiary
 {
     public partial class MainMenuStudentForm : Form
     {
-        public MainMenuStudentForm()
-        {
-            InitializeComponent();
-            DatabaseService dbService = new DatabaseService();
-            List<string[]> studentsList = dbService.GetStudents();
-            
-            foreach (var student in studentsList)
-            {
-                NameMenuLabel.Text = student[0] + " " + student[1] + " " + student[2];
-            }
-            List<string[]> groupsList = dbService.GetGroups();
-            foreach (var group in groupsList)
-            {
-                GroupMainMenuStudentLabel.Text = group[0];
-            }
-        }
+        public string groupId;
         public MainMenuStudentForm(string id)
         {
             InitializeComponent();
@@ -40,11 +25,12 @@ namespace StudentDiary
                 if (student[5] == id)
                 {
                     NameMenuLabel.Text = student[1] + " " + student[2] + " " + student[3];
+                    groupId = student[6];
                     GroupMainMenuStudentLabel.Text = student[6];
-                    
                 }
                 
             }
+            
             
         }
 
@@ -54,6 +40,9 @@ namespace StudentDiary
             profileStudentForm.Show();
         }
 
-
+        private void Mondaybutton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
