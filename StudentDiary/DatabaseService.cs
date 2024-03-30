@@ -18,14 +18,14 @@ namespace StudentDiary
             using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
             {
                 sqliteCon.Open();
-                string query = "SELECT login, password, role_id FROM users";
+                string query = "SELECT * FROM users";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            usersList.Add(new string[] { reader["login"].ToString(), reader["password"].ToString(), reader["role_id"].ToString() });
+                            usersList.Add(new string[] { reader["id"].ToString(), reader["login"].ToString(), reader["password"].ToString(), reader["role_id"].ToString() });
                         }
                     }
                 }
@@ -40,14 +40,14 @@ namespace StudentDiary
             using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
             {
                 sqliteCon.Open();
-                string query = "SELECT last_name, first_name, otchestvo, email FROM students";
+                string query = "SELECT * FROM students";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            studentsList.Add(new string[] { reader["last_name"].ToString(), reader["first_name"].ToString(), reader["otchestvo"].ToString(), reader["email"].ToString() });
+                            studentsList.Add(new string[] { reader["id"].ToString(), reader["last_name"].ToString(), reader["first_name"].ToString(), reader["otchestvo"].ToString(), reader["email"].ToString(), reader["user_id"].ToString(), reader["group_id"].ToString() });
                         }
                     }
                 }
@@ -84,14 +84,14 @@ namespace StudentDiary
             using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
             {
                 sqliteCon.Open();
-                string query = "SELECT name FROM groups";
+                string query = "SELECT * FROM groups";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            groupsList.Add(new string[] { reader["name"].ToString() });
+                            groupsList.Add(new string[] { reader["id"].ToString(), reader["name"].ToString() });
                         }
                     }
                 }

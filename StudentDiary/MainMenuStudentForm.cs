@@ -17,6 +17,7 @@ namespace StudentDiary
             InitializeComponent();
             DatabaseService dbService = new DatabaseService();
             List<string[]> studentsList = dbService.GetStudents();
+            
             foreach (var student in studentsList)
             {
                 NameMenuLabel.Text = student[0] + " " + student[1] + " " + student[2];
@@ -26,6 +27,25 @@ namespace StudentDiary
             {
                 GroupMainMenuStudentLabel.Text = group[0];
             }
+        }
+        public MainMenuStudentForm(string id)
+        {
+            InitializeComponent();
+            DatabaseService dbService = new DatabaseService();
+            List<string[]> studentsList = dbService.GetStudents();
+            List<string[]> groupsList = dbService.GetGroups();
+
+            foreach (var student in studentsList)
+            {
+                if (student[5] == id)
+                {
+                    NameMenuLabel.Text = student[1] + " " + student[2] + " " + student[3];
+                    GroupMainMenuStudentLabel.Text = student[6];
+                    
+                }
+                
+            }
+            
         }
 
         private void Profilebutton_Click(object sender, EventArgs e)

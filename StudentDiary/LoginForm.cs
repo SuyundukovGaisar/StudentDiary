@@ -28,16 +28,18 @@ namespace StudentDiary
 
             foreach (var user in usersList)
             {
-                if (user[0] == enteredLogin && user[1] == enteredPassword)
+                
+                if (user[1] == enteredLogin && user[2] == enteredPassword)
                 {
-                    if (user[2] == "1")
+                    string id = user[0];
+                    if (user[3] == "1")
                     {
                         MainMenuTeacherForm mainMenuTeacherForm = new MainMenuTeacherForm();
                         mainMenuTeacherForm.Show();
                     }
                     else
                     {
-                        MainMenuStudentForm mainMenuStudent = new MainMenuStudentForm();
+                        MainMenuStudentForm mainMenuStudent = new MainMenuStudentForm(id);
                         mainMenuStudent.Show();
                     }
                     return;
