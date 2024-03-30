@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentDiary
 {
@@ -69,7 +65,7 @@ namespace StudentDiary
                     {
                         while (reader.Read())
                         {
-                            examsList.Add(new string[] { reader["name_exam"].ToString(), reader["date"].ToString(), reader["time"].ToString()});
+                            examsList.Add(new string[] { reader["name_exam"].ToString(), reader["date"].ToString(), reader["time"].ToString() });
                         }
                     }
                 }
@@ -113,7 +109,7 @@ namespace StudentDiary
                     {
                         while (reader.Read())
                         {
-                            marksList.Add(new string[] { reader["date"].ToString(), reader["name_exam"].ToString(), reader["mark_exam"].ToString() });
+                            marksList.Add(new string[] { reader["student_id"].ToString(), reader["date"].ToString(), reader["name_exam"].ToString(), reader["mark_exam"].ToString() });
                         }
                     }
                 }
@@ -153,7 +149,7 @@ namespace StudentDiary
                     {
                         while (reader.Read())
                         {
-                            schedulesList.Add(new string[] { reader["id"].ToString(), reader["subject_id"].ToString(), reader["teacher_id"].ToString(), reader["group_id"].ToString(), reader["typeof_lesson"].ToString(), reader["dayofweek"].ToString(), reader["start_time"].ToString(), reader["end_time"].ToString() });
+                            schedulesList.Add(new string[] { reader["id"].ToString(), reader["subject_id"].ToString(), reader["teacher_id"].ToString(), reader["group_id"].ToString(), reader["typeof_lesson"].ToString(), reader["start_time"].ToString(), reader["end_time"].ToString() });
                         }
                     }
                 }

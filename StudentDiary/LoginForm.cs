@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentDiary
@@ -28,7 +21,7 @@ namespace StudentDiary
 
             foreach (var user in usersList)
             {
-                
+
                 if (user[1] == enteredLogin && user[2] == enteredPassword)
                 {
                     string id = user[0];

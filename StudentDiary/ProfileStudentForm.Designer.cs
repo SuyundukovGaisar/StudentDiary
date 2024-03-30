@@ -82,9 +82,9 @@
             this.PasswordStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordStudentLabel.Location = new System.Drawing.Point(12, 195);
             this.PasswordStudentLabel.Name = "PasswordStudentLabel";
-            this.PasswordStudentLabel.Size = new System.Drawing.Size(80, 25);
+            this.PasswordStudentLabel.Size = new System.Drawing.Size(86, 25);
             this.PasswordStudentLabel.TabIndex = 6;
-            this.PasswordStudentLabel.Text = "Пароль";
+            this.PasswordStudentLabel.Text = "Пароль:";
             // 
             // PasswordStudentInfoLabel
             // 

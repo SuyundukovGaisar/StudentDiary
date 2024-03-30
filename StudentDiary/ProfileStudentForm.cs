@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace StudentDiary
@@ -16,15 +9,23 @@ namespace StudentDiary
         {
             InitializeComponent();
             DatabaseService dbService = new DatabaseService();
-            List<string[]> studentsList = new List<string[]>();
-            foreach (string[] student in studentsList)
+            List<string[]> studentsList = dbService.GetStudents();
+            List<string[]> usersList = dbService.GetUsers();
+            foreach (var student in studentsList)
             {
                 if (student[5] == studentId)
                 {
                     NameStudentInfoLabel.Text = student[1] + " " + student[2] + " " + student[3];
+                    EmaiStudentInfoLabel.Text = student[4];
                 }
             }
-            
+            foreach (var user in usersList)
+            {
+                if (user[0] == studentId)
+                {
+                    PasswordStudentInfoLabel.Text = user[2];
+                }
+            }
         }
     }
 }

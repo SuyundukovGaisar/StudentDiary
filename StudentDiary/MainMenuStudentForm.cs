@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentDiary
@@ -25,7 +19,7 @@ namespace StudentDiary
             {
                 if (student[5] == id)
                 {
-                    studentId = student[5];
+                    studentId = id;
                     NameMenuLabel.Text = student[1] + " " + student[2] + " " + student[3];
                     foreach (var group in groupsList)
                     {
@@ -69,6 +63,12 @@ namespace StudentDiary
         {
             ScheduleForm scheduleForm = new ScheduleForm(groupId, "5");
             scheduleForm.Show();
+        }
+
+        private void Examsbutton_Click(object sender, EventArgs e)
+        {
+            ExamStudentForm examStudentForm = new ExamStudentForm(studentId);
+            examStudentForm.Show();
         }
     }
 }

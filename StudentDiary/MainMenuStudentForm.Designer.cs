@@ -150,6 +150,7 @@
             this.Examsbutton.TabIndex = 9;
             this.Examsbutton.Text = "Экзамены";
             this.Examsbutton.UseVisualStyleBackColor = false;
+            this.Examsbutton.Click += new System.EventHandler(this.Examsbutton_Click);
             // 
             // MainMenuStudentForm
             // 
