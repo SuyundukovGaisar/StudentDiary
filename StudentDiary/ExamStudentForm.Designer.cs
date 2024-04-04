@@ -30,6 +30,9 @@
         {
             this.ExamStudentGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacher_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameExam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ExamStudentGridView)).BeginInit();
@@ -40,6 +43,9 @@
             this.ExamStudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ExamStudentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.Student_id,
+            this.teacher_id,
+            this.Date,
             this.NameExam,
             this.Mark});
             this.ExamStudentGridView.Location = new System.Drawing.Point(13, 12);
@@ -55,6 +61,27 @@
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.Width = 125;
+            // 
+            // Student_id
+            // 
+            this.Student_id.HeaderText = "Student_id";
+            this.Student_id.MinimumWidth = 6;
+            this.Student_id.Name = "Student_id";
+            this.Student_id.Width = 125;
+            // 
+            // teacher_id
+            // 
+            this.teacher_id.HeaderText = "Teacher_id";
+            this.teacher_id.MinimumWidth = 6;
+            this.teacher_id.Name = "teacher_id";
+            this.teacher_id.Width = 125;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Дата";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.Width = 125;
             // 
             // NameExam
             // 
@@ -87,6 +114,9 @@
 
         private System.Windows.Forms.DataGridView ExamStudentGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameExam;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mark;
     }

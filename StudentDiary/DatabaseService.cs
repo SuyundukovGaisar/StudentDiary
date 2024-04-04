@@ -102,14 +102,14 @@ namespace StudentDiary
             using (SQLiteConnection sqliteCon = new SQLiteConnection(connectionString))
             {
                 sqliteCon.Open();
-                string query = "SELECT date, name_exam, mark_exam FROM marks";
+                string query = "SELECT id, student_id, teacher_id, date, name_exam, mark_exam FROM marks";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, sqliteCon))
                 {
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            marksList.Add(new string[] { reader["student_id"].ToString(), reader["date"].ToString(), reader["name_exam"].ToString(), reader["mark_exam"].ToString() });
+                            marksList.Add(new string[] { reader["id"].ToString(), reader["student_id"].ToString(), reader["teacher_id"].ToString(), reader["date"].ToString(), reader["name_exam"].ToString(), reader["mark_exam"].ToString() });
                         }
                     }
                 }

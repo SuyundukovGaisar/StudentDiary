@@ -14,7 +14,13 @@ namespace StudentDiary
             InitializeComponent();
             DatabaseService dbService = new DatabaseService();
             List<string[]> marksList = dbService.GetMarks();
-            
+            foreach (string[] mark in marksList)
+            {
+                if (mark[1] == id)
+                {
+                    ExamStudentGridView.Rows.Add(mark);
+                }
+            }
         }
     }
 }
